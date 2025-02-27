@@ -4,5 +4,6 @@ import serviceProviderController from "../controllers/serviceProvidersController
 const routes = express.Router();
 
 routes.get("/service-providers", serviceProviderController.getServiceProvider);
+routes.post("/service-providers", serviceProviderController.registerServiceProvider)
 
 export default routes;
