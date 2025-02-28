@@ -6,6 +6,7 @@ const routes = express.Router();
 routes.get("/service-providers", serviceProviderController.getServiceProvider);
 routes.get("/service-providers/:id", serviceProviderController.serviceProviderListForId);
 routes.post("/service-providers", serviceProviderController.registerServiceProvider);
+routes.put("/service-providers/:id", serviceProviderController.updateServiceProvider);
 
 
 export default routes;
