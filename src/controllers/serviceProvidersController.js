@@ -45,6 +45,16 @@ class serviceProviderController {
     } catch (error) {
       res.status(500).json({ message: `${error.message} - request failed` });
     }
+  };
+
+  static async deleteServiceProvider(req, res) {
+    try{
+      const id = req.params.id;
+      await serviceProvider.findByIdAndDelete(id)
+      res.status(200).send("Removed");
+    }catch(error){
+      res.status(500).json({ message: `${error.message} - request failed` });
+    }
   }
 }
 
